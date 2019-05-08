@@ -1,0 +1,1209 @@
+{
+    "project": {},
+    "files": {
+        "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\baseParticle.js": {
+            "name": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\baseParticle.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\bitmapParticle.js": {
+            "name": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\bitmapParticle.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js": {
+            "name": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "modules": {
+                "createjs": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js": {
+            "name": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "modules": {},
+            "classes": {
+                "ParticleEmitter": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\shapeParticle.js": {
+            "name": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\shapeParticle.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "createjs": {
+            "name": "createjs",
+            "submodules": {},
+            "classes": {
+                "ParticleEmitter": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 303
+        }
+    },
+    "classes": {
+        "ParticleEmitter": {
+            "name": "ParticleEmitter",
+            "shortname": "ParticleEmitter",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "createjs",
+            "namespace": "",
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 303,
+            "description": "A Particle Emitter extends DisplayObject and must be added to a Container object. An emitter will emit a stream of particles\nadhereing to the given configuration.",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "image",
+                    "description": "The image to use for each particle. If no image is provided then a simple circle will be drawn.",
+                    "type": "Image",
+                    "optional": true
+                }
+            ]
+        }
+    },
+    "classitems": [
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\baseParticle.js",
+            "line": 1,
+            "fileoverview": "baseParticle.js",
+            "version": "0.5.0",
+            "license": "Copyright (c) 2013 Purple Monkey Studios\nPermission is hereby granted, free of charge, to any person\nobtaining a copy of this software and associated documentation\nfiles (the \"Software\"), to deal in the Software without\nrestriction, including without limitation the rights to use,\ncopy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the\nSoftware is furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES\nOF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT\nHOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,\nWHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\nFROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR\nOTHER DEALINGS IN THE SOFTWARE.",
+            "class": "ParticleEmitter"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\bitmapParticle.js",
+            "line": 1,
+            "fileoverview": "bitmapParticle.js",
+            "version": "0.5.0",
+            "license": "Copyright (c) 2013 Purple Monkey Studios\nPermission is hereby granted, free of charge, to any person\nobtaining a copy of this software and associated documentation\nfiles (the \"Software\"), to deal in the Software without\nrestriction, including without limitation the rights to use,\ncopy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the\nSoftware is furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES\nOF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT\nHOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,\nWHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\nFROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR\nOTHER DEALINGS IN THE SOFTWARE.",
+            "class": "ParticleEmitter"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\bitmapParticle.js",
+            "line": 36,
+            "description": "A shape particle",
+            "is_constructor": 1,
+            "extends": "createjs.Bitmap",
+            "class": "ParticleEmitter"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 1,
+            "fileoverview": "particleEmitter.js",
+            "version": "0.5.0",
+            "license": "Copyright (c) 2013 Purple Monkey Studios\nPermission is hereby granted, free of charge, to any person\nobtaining a copy of this software and associated documentation\nfiles (the \"Software\"), to deal in the Software without\nrestriction, including without limitation the rights to use,\ncopy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the\nSoftware is furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES\nOF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT\nHOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,\nWHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\nFROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR\nOTHER DEALINGS IN THE SOFTWARE.",
+            "class": "ParticleEmitter"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 55,
+            "description": "Enum to represent the state of the particle emitter",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 64,
+            "description": "Enum to represent the type of the particle emitter",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 85,
+            "description": "Should the emitter be removed from the parent when finished?",
+            "itemtype": "property",
+            "name": "autoRemoveOnFinished",
+            "type": "{boolean}",
+            "default": "false",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 94,
+            "description": "Is debug mode active for this emitter. If so, render debug text.",
+            "itemtype": "property",
+            "name": "debugMode",
+            "type": "{boolean}",
+            "default": "false",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 103,
+            "description": "The amount of time (milliseconds) that the emitter will last. A value of -1 means that the emitter will \nlast for an infinite amount of time.",
+            "itemtype": "property",
+            "name": "duration",
+            "type": "{number}",
+            "default": "-1",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 113,
+            "description": "The type of particle emitter to create",
+            "itemtype": "property",
+            "name": "emitterType",
+            "type": "{ParticleEmitterType}",
+            "default": "ParticleEmitterType.Emit",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 122,
+            "description": "The total number of particles that can exist at any one time",
+            "itemtype": "property",
+            "name": "maxParticles",
+            "type": "{number}",
+            "default": "200",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 131,
+            "description": "The rate at which particles are generated (number of particles per second)",
+            "itemtype": "property",
+            "name": "emissionRate",
+            "type": "{number}",
+            "default": "1",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 140,
+            "description": "The current state of the particle emitter",
+            "itemtype": "property",
+            "name": "state",
+            "type": "{ParticleEmitterState}",
+            "default": "ParticleEmitterState.Created",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 149,
+            "description": "The image to show for each particle",
+            "itemtype": "property",
+            "name": "image",
+            "type": "{Image}",
+            "default": "null",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 161,
+            "description": "The accelerration of each particle in the X axis.",
+            "itemtype": "property",
+            "name": "accelerationX",
+            "type": "{decimal}",
+            "default": "0",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 170,
+            "description": "The accelerration of each particle in the Y axis. This can be used to simulate forces such as Gravity",
+            "itemtype": "property",
+            "name": "accelerationY",
+            "type": "{decimal}",
+            "default": "0",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 179,
+            "description": "The angle (degrees) in which to fire the particle from the origin point",
+            "itemtype": "property",
+            "name": "angle",
+            "type": "{number}",
+            "default": "0",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 188,
+            "description": "The amount of degrees that the angle can vary by",
+            "itemtype": "property",
+            "name": "angleVar",
+            "type": "{number}",
+            "default": "0",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 197,
+            "description": "The end opacity of each particle, where 1 is opaque and 0 is transparent. A null value signifies that\nthe value will not differ from the start value.",
+            "itemtype": "property",
+            "name": "endOpacity",
+            "type": "{number}",
+            "default": "null",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 207,
+            "description": "The end color of each particle [r,g,b]. A null value signifies that\nthe value will not differ from the start value.",
+            "itemtype": "property",
+            "name": "endColor",
+            "type": "{[r,g,b]}",
+            "default": "null",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 217,
+            "description": "The variance in the end color. A null value signifies that\nthe value will not differ from the start value.",
+            "itemtype": "property",
+            "name": "endColorVar",
+            "type": "{[r,g,b]}",
+            "default": "null",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 227,
+            "description": "The end size of each particle, in pixels. A null value signifies that\nthe value will not differ from the start value.",
+            "itemtype": "property",
+            "name": "endSize",
+            "type": "{number}",
+            "default": "null",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 237,
+            "description": "The variance in end size, in pixels. A null value signifies that\nthe value will not differ from the start value.",
+            "itemtype": "property",
+            "name": "endSizeVar",
+            "type": "{number}",
+            "default": "0",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 247,
+            "description": "The number of degrees to spin each particle per second when each particle is destroyed. A null value signifies that\nthe value will not differ from the start value.",
+            "itemtype": "property",
+            "name": "endSpin",
+            "type": "{number}",
+            "default": "null",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 257,
+            "description": "The variance in end spin. A null value signifies that\nthe value will not differ from the start value.",
+            "itemtype": "property",
+            "name": "endSpinVar",
+            "type": "{number}",
+            "default": "0",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 267,
+            "description": "The amount of time (milliseconds) that each particle will last before being destroyed",
+            "itemtype": "property",
+            "name": "life",
+            "type": "{number}",
+            "default": "4000",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 276,
+            "description": "The variance in the amount of life time (milliseconds)",
+            "itemtype": "property",
+            "name": "lifeVar",
+            "type": "{number}",
+            "default": "0",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 285,
+            "description": "The variance in the x position of emitted particles",
+            "itemtype": "property",
+            "name": "positionVarX",
+            "type": "{number}",
+            "default": "0",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 294,
+            "description": "The variance in the y position of emitted particles",
+            "itemtype": "property",
+            "name": "positionVarY",
+            "type": "{number}",
+            "default": "0",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 303,
+            "description": "The radial acceleration of the particle",
+            "itemtype": "property",
+            "name": "radialAcceleration",
+            "type": "{number}",
+            "default": "0",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 312,
+            "description": "The variance of the radial acceleration of the particle",
+            "itemtype": "property",
+            "name": "radialAccelerationVar",
+            "type": "{number}",
+            "default": "0",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 321,
+            "description": "The number of pixels per second that the particle will move",
+            "itemtype": "property",
+            "name": "speed",
+            "type": "{number}",
+            "default": "10",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 330,
+            "description": "The number of pixels per second that the speed can vary by",
+            "itemtype": "property",
+            "name": "speedVar",
+            "type": "{number}",
+            "default": "0",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 339,
+            "description": "The start opacity of each particle, where 1 is opaque and 0 is transparent",
+            "itemtype": "property",
+            "name": "startOpacity",
+            "type": "{number}",
+            "default": "0",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 348,
+            "description": "The color of each particle [r,g,b] when it is created",
+            "itemtype": "property",
+            "name": "startColor",
+            "type": "{[r,g,b]}",
+            "default": "[255,0,0]",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 357,
+            "description": "The variance in the start color",
+            "itemtype": "property",
+            "name": "startColorVar",
+            "type": "{[r,g,b]}",
+            "default": "[0,0,0]",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 366,
+            "description": "The start size of each particle, in pixels",
+            "itemtype": "property",
+            "name": "startSize",
+            "type": "{number}",
+            "default": "20",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 375,
+            "description": "The variance in start size, in pixels",
+            "itemtype": "property",
+            "name": "startSizeVar",
+            "type": "{number}",
+            "default": "0",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 384,
+            "description": "The number of degrees to spin each particle per second when each particle is created",
+            "itemtype": "property",
+            "name": "startSpin",
+            "type": "{number}",
+            "default": "0",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 393,
+            "description": "The variance in start spin",
+            "itemtype": "property",
+            "name": "startSpinVar",
+            "type": "{number}",
+            "default": "0",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 402,
+            "description": "The tangental acceleration of the particle",
+            "itemtype": "property",
+            "name": "tangentalAcceleration",
+            "type": "{number}",
+            "default": "0",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 412,
+            "description": "The variance in the tangental acceleration of the particle",
+            "itemtype": "property",
+            "name": "tangentalAccelerationVar",
+            "type": "{number}",
+            "default": "0",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 440,
+            "description": "Resets the emitter which removes any active particles before starting all over again.",
+            "itemtype": "method",
+            "name": "reset",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js",
+            "line": 719,
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 2,
+            "fileoverview": "baseParticle.js",
+            "version": "0.5.0",
+            "license": "Copyright (c) 2013 Purple Monkey Studios\nPermission is hereby granted, free of charge, to any person\nobtaining a copy of this software and associated documentation\nfiles (the \"Software\"), to deal in the Software without\nrestriction, including without limitation the rights to use,\ncopy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the\nSoftware is furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES\nOF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT\nHOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,\nWHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\nFROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR\nOTHER DEALINGS IN THE SOFTWARE.",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 186,
+            "fileoverview": "bitmapParticle.js",
+            "version": "0.5.0",
+            "license": "Copyright (c) 2013 Purple Monkey Studios\nPermission is hereby granted, free of charge, to any person\nobtaining a copy of this software and associated documentation\nfiles (the \"Software\"), to deal in the Software without\nrestriction, including without limitation the rights to use,\ncopy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the\nSoftware is furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES\nOF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT\nHOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,\nWHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\nFROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR\nOTHER DEALINGS IN THE SOFTWARE.",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 221,
+            "description": "A shape particle",
+            "is_constructor": 1,
+            "extends": "createjs.Bitmap",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 268,
+            "fileoverview": "particleEmitter.js",
+            "version": "0.5.0",
+            "license": "Copyright (c) 2013 Purple Monkey Studios\nPermission is hereby granted, free of charge, to any person\nobtaining a copy of this software and associated documentation\nfiles (the \"Software\"), to deal in the Software without\nrestriction, including without limitation the rights to use,\ncopy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the\nSoftware is furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES\nOF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT\nHOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,\nWHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\nFROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR\nOTHER DEALINGS IN THE SOFTWARE.",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 322,
+            "description": "Enum to represent the state of the particle emitter",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 331,
+            "description": "Enum to represent the type of the particle emitter",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 352,
+            "description": "Should the emitter be removed from the parent when finished?",
+            "itemtype": "property",
+            "name": "autoRemoveOnFinished",
+            "type": "{boolean}",
+            "default": "false",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 361,
+            "description": "Is debug mode active for this emitter. If so, render debug text.",
+            "itemtype": "property",
+            "name": "debugMode",
+            "type": "{boolean}",
+            "default": "false",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 370,
+            "description": "The amount of time (milliseconds) that the emitter will last. A value of -1 means that the emitter will \nlast for an infinite amount of time.",
+            "itemtype": "property",
+            "name": "duration",
+            "type": "{number}",
+            "default": "-1",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 380,
+            "description": "The type of particle emitter to create",
+            "itemtype": "property",
+            "name": "emitterType",
+            "type": "{ParticleEmitterType}",
+            "default": "ParticleEmitterType.Emit",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 389,
+            "description": "The total number of particles that can exist at any one time",
+            "itemtype": "property",
+            "name": "maxParticles",
+            "type": "{number}",
+            "default": "200",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 398,
+            "description": "The rate at which particles are generated (number of particles per second)",
+            "itemtype": "property",
+            "name": "emissionRate",
+            "type": "{number}",
+            "default": "1",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 407,
+            "description": "The current state of the particle emitter",
+            "itemtype": "property",
+            "name": "state",
+            "type": "{ParticleEmitterState}",
+            "default": "ParticleEmitterState.Created",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 416,
+            "description": "The image to show for each particle",
+            "itemtype": "property",
+            "name": "image",
+            "type": "{Image}",
+            "default": "null",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 428,
+            "description": "The accelerration of each particle in the X axis.",
+            "itemtype": "property",
+            "name": "accelerationX",
+            "type": "{decimal}",
+            "default": "0",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 437,
+            "description": "The accelerration of each particle in the Y axis. This can be used to simulate forces such as Gravity",
+            "itemtype": "property",
+            "name": "accelerationY",
+            "type": "{decimal}",
+            "default": "0",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 446,
+            "description": "The angle (degrees) in which to fire the particle from the origin point",
+            "itemtype": "property",
+            "name": "angle",
+            "type": "{number}",
+            "default": "0",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 455,
+            "description": "The amount of degrees that the angle can vary by",
+            "itemtype": "property",
+            "name": "angleVar",
+            "type": "{number}",
+            "default": "0",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 464,
+            "description": "The end opacity of each particle, where 1 is opaque and 0 is transparent. A null value signifies that\nthe value will not differ from the start value.",
+            "itemtype": "property",
+            "name": "endOpacity",
+            "type": "{number}",
+            "default": "null",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 474,
+            "description": "The end color of each particle [r,g,b]. A null value signifies that\nthe value will not differ from the start value.",
+            "itemtype": "property",
+            "name": "endColor",
+            "type": "{[r,g,b]}",
+            "default": "null",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 484,
+            "description": "The variance in the end color. A null value signifies that\nthe value will not differ from the start value.",
+            "itemtype": "property",
+            "name": "endColorVar",
+            "type": "{[r,g,b]}",
+            "default": "null",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 494,
+            "description": "The end size of each particle, in pixels. A null value signifies that\nthe value will not differ from the start value.",
+            "itemtype": "property",
+            "name": "endSize",
+            "type": "{number}",
+            "default": "null",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 504,
+            "description": "The variance in end size, in pixels. A null value signifies that\nthe value will not differ from the start value.",
+            "itemtype": "property",
+            "name": "endSizeVar",
+            "type": "{number}",
+            "default": "0",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 514,
+            "description": "The number of degrees to spin each particle per second when each particle is destroyed. A null value signifies that\nthe value will not differ from the start value.",
+            "itemtype": "property",
+            "name": "endSpin",
+            "type": "{number}",
+            "default": "null",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 524,
+            "description": "The variance in end spin. A null value signifies that\nthe value will not differ from the start value.",
+            "itemtype": "property",
+            "name": "endSpinVar",
+            "type": "{number}",
+            "default": "0",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 534,
+            "description": "The amount of time (milliseconds) that each particle will last before being destroyed",
+            "itemtype": "property",
+            "name": "life",
+            "type": "{number}",
+            "default": "4000",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 543,
+            "description": "The variance in the amount of life time (milliseconds)",
+            "itemtype": "property",
+            "name": "lifeVar",
+            "type": "{number}",
+            "default": "0",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 552,
+            "description": "The variance in the x position of emitted particles",
+            "itemtype": "property",
+            "name": "positionVarX",
+            "type": "{number}",
+            "default": "0",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 561,
+            "description": "The variance in the y position of emitted particles",
+            "itemtype": "property",
+            "name": "positionVarY",
+            "type": "{number}",
+            "default": "0",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 570,
+            "description": "The radial acceleration of the particle",
+            "itemtype": "property",
+            "name": "radialAcceleration",
+            "type": "{number}",
+            "default": "0",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 579,
+            "description": "The variance of the radial acceleration of the particle",
+            "itemtype": "property",
+            "name": "radialAccelerationVar",
+            "type": "{number}",
+            "default": "0",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 588,
+            "description": "The number of pixels per second that the particle will move",
+            "itemtype": "property",
+            "name": "speed",
+            "type": "{number}",
+            "default": "10",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 597,
+            "description": "The number of pixels per second that the speed can vary by",
+            "itemtype": "property",
+            "name": "speedVar",
+            "type": "{number}",
+            "default": "0",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 606,
+            "description": "The start opacity of each particle, where 1 is opaque and 0 is transparent",
+            "itemtype": "property",
+            "name": "startOpacity",
+            "type": "{number}",
+            "default": "0",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 615,
+            "description": "The color of each particle [r,g,b] when it is created",
+            "itemtype": "property",
+            "name": "startColor",
+            "type": "{[r,g,b]}",
+            "default": "[255,0,0]",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 624,
+            "description": "The variance in the start color",
+            "itemtype": "property",
+            "name": "startColorVar",
+            "type": "{[r,g,b]}",
+            "default": "[0,0,0]",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 633,
+            "description": "The start size of each particle, in pixels",
+            "itemtype": "property",
+            "name": "startSize",
+            "type": "{number}",
+            "default": "20",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 642,
+            "description": "The variance in start size, in pixels",
+            "itemtype": "property",
+            "name": "startSizeVar",
+            "type": "{number}",
+            "default": "0",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 651,
+            "description": "The number of degrees to spin each particle per second when each particle is created",
+            "itemtype": "property",
+            "name": "startSpin",
+            "type": "{number}",
+            "default": "0",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 660,
+            "description": "The variance in start spin",
+            "itemtype": "property",
+            "name": "startSpinVar",
+            "type": "{number}",
+            "default": "0",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 669,
+            "description": "The tangental acceleration of the particle",
+            "itemtype": "property",
+            "name": "tangentalAcceleration",
+            "type": "{number}",
+            "default": "0",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 679,
+            "description": "The variance in the tangental acceleration of the particle",
+            "itemtype": "property",
+            "name": "tangentalAccelerationVar",
+            "type": "{number}",
+            "default": "0",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 707,
+            "description": "Resets the emitter which removes any active particles before starting all over again.",
+            "itemtype": "method",
+            "name": "reset",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 986,
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 1032,
+            "fileoverview": "shapeParticle.js",
+            "version": "0.5.0",
+            "license": "Copyright (c) 2013 Purple Monkey Studios\nPermission is hereby granted, free of charge, to any person\nobtaining a copy of this software and associated documentation\nfiles (the \"Software\"), to deal in the Software without\nrestriction, including without limitation the rights to use,\ncopy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the\nSoftware is furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES\nOF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT\nHOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,\nWHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\nFROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR\nOTHER DEALINGS IN THE SOFTWARE.",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js",
+            "line": 1064,
+            "description": "A shape particle",
+            "is_constructor": 1,
+            "extends": "createjs.Shape",
+            "class": "ParticleEmitter",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\shapeParticle.js",
+            "line": 1,
+            "fileoverview": "shapeParticle.js",
+            "version": "0.5.0",
+            "license": "Copyright (c) 2013 Purple Monkey Studios\nPermission is hereby granted, free of charge, to any person\nobtaining a copy of this software and associated documentation\nfiles (the \"Software\"), to deal in the Software without\nrestriction, including without limitation the rights to use,\ncopy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the\nSoftware is furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES\nOF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT\nHOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,\nWHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\nFROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR\nOTHER DEALINGS IN THE SOFTWARE.",
+            "class": "",
+            "module": "createjs"
+        },
+        {
+            "file": "C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\shapeParticle.js",
+            "line": 33,
+            "description": "A shape particle",
+            "is_constructor": 1,
+            "extends": "createjs.Shape",
+            "class": "",
+            "module": "createjs"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "unknown tag: fileoverview",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\baseParticle.js:1"
+        },
+        {
+            "message": "unknown tag: version",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\baseParticle.js:1"
+        },
+        {
+            "message": "unknown tag: license",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\baseParticle.js:1"
+        },
+        {
+            "message": "unknown tag: fileoverview",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\bitmapParticle.js:1"
+        },
+        {
+            "message": "unknown tag: version",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\bitmapParticle.js:1"
+        },
+        {
+            "message": "unknown tag: license",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\bitmapParticle.js:1"
+        },
+        {
+            "message": "unknown tag: fileoverview",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js:1"
+        },
+        {
+            "message": "unknown tag: version",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js:1"
+        },
+        {
+            "message": "unknown tag: license",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js:1"
+        },
+        {
+            "message": "unknown tag: fileoverview",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js:2"
+        },
+        {
+            "message": "unknown tag: version",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js:2"
+        },
+        {
+            "message": "unknown tag: license",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js:2"
+        },
+        {
+            "message": "unknown tag: fileoverview",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js:186"
+        },
+        {
+            "message": "unknown tag: version",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js:186"
+        },
+        {
+            "message": "unknown tag: license",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js:186"
+        },
+        {
+            "message": "unknown tag: fileoverview",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js:268"
+        },
+        {
+            "message": "unknown tag: version",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js:268"
+        },
+        {
+            "message": "unknown tag: license",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js:268"
+        },
+        {
+            "message": "unknown tag: fileoverview",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js:1032"
+        },
+        {
+            "message": "unknown tag: version",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js:1032"
+        },
+        {
+            "message": "unknown tag: license",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js:1032"
+        },
+        {
+            "message": "unknown tag: fileoverview",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\shapeParticle.js:1"
+        },
+        {
+            "message": "unknown tag: version",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\shapeParticle.js:1"
+        },
+        {
+            "message": "unknown tag: license",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\shapeParticle.js:1"
+        },
+        {
+            "message": "Missing item type",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\baseParticle.js:1"
+        },
+        {
+            "message": "Missing item type",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\bitmapParticle.js:1"
+        },
+        {
+            "message": "Missing item type\nA shape particle",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\bitmapParticle.js:36"
+        },
+        {
+            "message": "Missing item type",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js:1"
+        },
+        {
+            "message": "Missing item type\nEnum to represent the state of the particle emitter",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js:55"
+        },
+        {
+            "message": "Missing item type\nEnum to represent the type of the particle emitter",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js:64"
+        },
+        {
+            "message": "Missing item type",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitter.js:719"
+        },
+        {
+            "message": "Missing item type",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js:2"
+        },
+        {
+            "message": "Missing item type",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js:186"
+        },
+        {
+            "message": "Missing item type\nA shape particle",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js:221"
+        },
+        {
+            "message": "Missing item type",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js:268"
+        },
+        {
+            "message": "Missing item type\nEnum to represent the state of the particle emitter",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js:322"
+        },
+        {
+            "message": "Missing item type\nEnum to represent the type of the particle emitter",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js:331"
+        },
+        {
+            "message": "Missing item type",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js:986"
+        },
+        {
+            "message": "Missing item type",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js:1032"
+        },
+        {
+            "message": "Missing item type\nA shape particle",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\particleEmitterJs.js:1064"
+        },
+        {
+            "message": "Missing item type",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\shapeParticle.js:1"
+        },
+        {
+            "message": "Missing item type\nA shape particle",
+            "line": " C:\\MattiusSVN\\ParticleEmitterJS\\Website\\js\\ParticleEmitterJS\\shapeParticle.js:33"
+        }
+    ]
+}

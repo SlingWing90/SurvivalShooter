@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Particle Emitter Example - Flame</title>
+    <script src="libs/easeljs-0.5.0.min.js"></script>
+    <script src="libs/tweenjs-0.3.0.min.js"></script>
+    <script src="libs/movieclip-0.5.0.min.js"></script>
+    <script src="libs/preloadjs-0.2.0.min.js"></script>
+    <script src="libs/Filter.js"></script>
+    <script src="libs/ColorFilter.js"></script>
+    <script src="libs/particleEmitterJs-0.5.0.min.js"></script>
+    <script type="text/javascript">
+        var canvas;         // the canvas element
+        var context;        // the 2d context of the canvas
+        var stage;          // the createjs stage
+        var emitter;        // the emitter
+        var fpsLabel;       // label to show the current frames per second
+        var particleImage;  // the image to use for each particle
+
+        function loadAssets() {
+            particleImage = new Image();
+            particleImage.onload = initCanvas;
+            particleImage.src = "images/particle_base.png";
+            
+        }
+
+        function initCanvas() {
+
+            canvas = document.getElementById('particleEmitterCanvas');
+            context = canvas.getContext("2d");
+            stage = new createjs.Stage(canvas);
+
+            createjs.Ticker.setFPS(30);
+            createjs.Ticker.addListener(update);
+
+            addFPS();
+            addParticleEmitter(canvas.width / 2, canvas.height / 2);
+        }
+
+        function addFPS() {
+
+            fpsLabel = new createjs.Text("-- fps", "bold 14px Arial", "#BBBBBB");
+            stage.addChild(fpsLabel);
+        }
+
+        function addParticleEmitter(x, y) {
+
+            emitter = new createjs.ParticleEmitter(particleImage);
+            emitter.position = new createjs.Point(x, y);
+            emitter.emitterType = createjs.ParticleEmitterType.Emit;
+            emitter.emissionRate = 50;
+            emitter.maxParticles = 200;
+            emitter.life = 2000;
+            emitter.lifeVar = 2000;
+            emitter.speed = 10;
+            emitter.speedVar = 0;
+            emitter.positionVarX = 2;
+            emitter.positionVarY = 0;
+            emitter.accelerationX = 0;
+            emitter.accelerationY = 0;
+            emitter.radialAcceleration = 0;
+            emitter.radialAccelerationVar = 0;
+            emitter.tangentalAcceleration = 0;
+            emitter.tangentalAccelerationVar = 0;
+            emitter.angle = 270;
+            emitter.angleVar = 15;
+            emitter.startSpin = 0;
+            emitter.startSpinVar = 0;
+            emitter.endSpin = null;
+            emitter.endSpinVar = null;
+            emitter.startColor = [255, 200, 0];
+            emitter.startColorVar = [0, 0, 0];
+            emitter.startOpacity = 1;
+            emitter.endColor = [255, 0, 0];
+            emitter.endColorVar = null;
+            emitter.endOpacity = 0;
+            emitter.startSize = 10;
+            emitter.startSizeVar = 0;
+            emitter.endSize = 15;
+            emitter.endSizeVar = null;
+
+            stage.addChild(emitter);
+        }
+
+        function update() {
+            fpsLabel.text = Math.round(createjs.Ticker.getMeasuredFPS()) + " fps";
+            stage.update();
+        }
+    </script>
+</head>
+<body onload="loadAssets();">
+    <canvas id="particleEmitterCanvas" style="background-color: black;" width="400" height="300"></canvas>
+</body>
+</html>

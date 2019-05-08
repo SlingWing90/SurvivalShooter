@@ -1,0 +1,437 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="files/js/jQuery_v2.1.1/jquery-2.1.1.js"></script>
+        <script src="files/js/jQuery_v2.1.1/jquery-migrate-1.2.1.js"></script>
+        <script src="files/js/CreateJS/createjs-2013.12.12.min.js"></script>
+        <script src="files/js/addons/ndgmr.Collision.js"></script>
+        <script>
+            var stage;
+            var player;
+            var keyState = {};
+            
+            var enemyList = new Array();
+            var enemyTicker = null;
+            var enemyIntervall = 2000;
+            
+            function enemyCreator(){
+                var dir = getRandomInt(0, 3);
+                var start = 0;
+                
+                
+                switch(dir){
+                    case 0:
+                        start = getRandomInt(0, 640);
+                        enemyList.push(new Enemy(stage, start, 0));
+                        break;
+                    
+                    case 1:
+                        start = getRandomInt(0, 640);
+                        enemyList.push(new Enemy(stage, start, 480));
+                        break;
+                     
+                    
+                    case 2:
+                        start = getRandomInt(0, 480);
+                        enemyList.push(new Enemy(stage, 0, start));
+                        break;
+                    
+                    case 3:
+                        start = getRandomInt(0, 480); 
+                        enemyList.push(new Enemy(stage, 640, start));
+                        break;
+                }
+                
+                handleZombieSound("Noise");
+            }
+            
+            function getRandomInt(min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+            
+            function init() {
+                // Game
+                stage = new createjs.Stage("demoCanvas");
+                player = new Player(stage);
+                
+                init_WeaponSound();
+                init_EnemySound();
+                
+                //enemyList.push(new Zombie(stage, 640, start)); 
+                createjs.Ticker.setFPS(40);
+                createjs.Ticker.addEventListener("tick", flip);
+                
+                enemyTicker = setInterval(function(){enemyCreator()}, enemyIntervall);
+                
+                
+            }
+            
+            function flip(){
+                player.move(keyState);
+                player.action(enemyList);
+                player.rotate();
+                
+                for(var x = 0; x < enemyList.length; x++){
+                   
+                    if(enemyList[x] != null){
+                        enemyList[x].Update(player);
+
+                        var collision = ndgmr.checkPixelCollision(player.bitmap, enemyList[x].bitmap, 0,true);
+                        if(collision != false){
+                            console.log("Player dead");
+                        }
+                        
+                        if(enemyList[x].isDead()){
+                            console.log("Enemy No. "+x+" killed");
+                            handleZombieSound("Dying");
+                            enemyList[x].bitmap.removeAllEventListeners();
+                            stage.removeChild(enemyList[x].bitmap);
+                            enemyList.splice(x, 1);
+                        }
+                    }
+                }
+              
+                stage.update();
+            }
+            
+            // Stage
+            function init_stage(){
+                
+            }
+            
+            // Object MouseCursor
+            var MouseCursor = {X: 0, Y: 0, IsPressed: false};
+        
+            // Class Player
+            function Player(stage){
+                this.stage = stage;
+                
+                /*
+                this.bitmap = new createjs.Bitmap("files/js/assets/player.png");
+                this.bitmap.regX = this.bitmap.regY = 16;
+                this.bitmap.x = 100;
+                this.bitmap.y = 100;
+                */
+                
+                // TODO SpriteSheet bearbetien. Verschiedene Waffenbildeer einbinden
+                //      Anschließend gotoAndStop-Belegen
+                var data = new createjs.SpriteSheet({
+                    images: ["files/js/assets/player_pistol.png"],
+                    frames: {"regX": 0, "regY": 0, "width": 66, "height": 60},
+                    animations: {walk: [0, 3]}
+                });
+               
+                this.bitmap = new createjs.Sprite(data, "walk");
+                this.bitmap.x = 100;
+                this.bitmap.x = 100;
+                this.bitmap.regX = 17;
+                this.bitmap.regY = 28;
+                this.bitmap.gotoAndStop(0);
+                this.stage.addChild(this.bitmap);
+                //var animation = new createjs.Sprite(spriteSheet, "walk");
+                
+               
+                //this.stage.addChild(this.bitmap);
+                
+                this.weapons = Weapons;
+                this.actWeapon = this.weapons.Pistol;
+                // TODO Grenades
+                this.grenades = 3;
+                
+                this.fireAllowed = true;
+                this.fireCounter = 0;
+                             
+                
+                
+                window.addEventListener('keydown',function(e){
+                    keyState[e.keyCode || e.which] = true;
+                },true);
+                
+                var that = this;
+                this.fireTimer = null; 
+                this.fireTicker = function(){
+                    // Count and set FireAllowed to true
+                    that.fireCounter++;
+                        
+                    if(that.fireCounter >= that.actWeapon.interval){
+                        window.clearInterval(that.fireTimer);
+                        that.fireAllowed = true;
+                        that.fireCounter = 0;
+                        
+                    }
+                }
+                
+                window.addEventListener('keyup',function(e){
+                    keyState[e.keyCode || e.which] = false;
+                    
+                    
+                    if(e.keyCode == 81){
+                        that.actWeapon = that.weapons.Switch(that.actWeapon.value);
+                        // TODO SpriteSheet-ID hier angeben
+                        that.bitmap.gotoAndStop(that.actWeapon.value);
+                    }
+                    
+                    if(e.keyCode == 27){
+                    //    flip.pause();
+                    }
+                },true);
+                
+                window.addEventListener('mousedown', function(e){
+                    MouseCursor.IsPressed = true;
+                }, true);
+                
+                window.addEventListener('mouseup', function(e){
+                    MouseCursor.IsPressed = false;
+                }, true);
+                
+                window.addEventListener('mousemove', function(e){
+                    MouseCursor.X = e.x;
+                    MouseCursor.Y = e.y;
+                }, false);
+
+           }
+            
+            Player.prototype.bitmap = null;
+            Player.prototype.stage = null;
+            
+            Player.prototype.weapons = Weapons;
+            // TODO Prüfen actWeapon
+            //Player.prototype.actWeapon = 
+            Player.prototype.grenades = 3;
+
+            Player.prototype.fireAllowed = true;
+            Player.prototype.fireCounter = 0;
+            Player.prototype.fireTimer = null;
+           
+            Player.prototype.move = function(key){
+                if (key[37] || key[65])
+                    this.bitmap.x -=3;
+                   
+
+                if (key[39] || key[68])
+                    this.bitmap.x += 3;
+                    
+                
+                if (key[38] || key[87])
+                    this.bitmap.y -=3;
+                    
+                
+                if (key[40] || key[83])
+                    this.bitmap.y += 3;
+                
+            }
+            
+            Player.prototype.action = function(enL){
+                if(MouseCursor.IsPressed){
+                    if(this.actWeapon.ammo == 0 && this.fireAllowed){
+                        handleWeaponShot("Empty");
+                        this.fireAllowed = false;
+                        this.fireTimer = window.setInterval(this.fireTicker, 100);
+                    }
+                    
+                    if((this.actWeapon.ammo > 0 || this.actWeapon.ammo == -1) && this.fireAllowed){
+                        console.log("FIRE");
+                        handleWeaponShot(this.actWeapon.name);
+                        
+                        if(this.actWeapon != this.weapons.Pistol){
+                            if(this.actWeapon.ammo >= 1){
+                                this.actWeapon.ammo--;
+                                console.log("weniger amm");
+                            }
+                        }
+                        
+                        for(var x = 0; x < enL.length; x++){
+                                if(enL[x] != null){
+                                    if(enL[x].bitmap.x <= MouseCursor.X + this.actWeapon.radius 
+                                        && enL[x].bitmap.x >= MouseCursor.X - this.actWeapon.radius 
+                                            && enL[x].bitmap.y <= MouseCursor.Y + this.actWeapon.radius 
+                                                && enL[x].bitmap.y >= MouseCursor.Y - this.actWeapon.radius ){
+                                                if(this.fireAllowed){
+                                                    handleZombieSound("Hit");
+                                                    enL[x].health -= this.actWeapon.damage;
+                                                    console.log("HIT: "+this.actWeapon.name);
+                                                }
+                                    }
+                                }
+                            }
+                        this.fireAllowed = false;
+                        this.fireTimer = window.setInterval(this.fireTicker, 100);
+                    }
+                    
+                    
+                }
+            }
+            
+            Player.prototype.rotate = function(){
+                var angle = Math.atan2(MouseCursor.Y - this.bitmap.y, MouseCursor.X - this.bitmap.x );
+                angle = angle * (180/Math.PI);
+                this.bitmap.rotation = angle;
+            }
+            
+            // Object Weapons
+            var Weapons = {
+                    Pistol: {value: 0, name: "Pistol", radius: 16, damage: 34, ammo: -1, interval: 8},
+                    Uzi: {value: 1, name: "Uzi", radius: 16, damage: 50, ammo: 10, interval: 5},
+                    Shotgun: {value: 2, name: "Shotgun", radius: 32, damage: 50, ammo: 10, interval: 10},
+                    AssaultRifle: {value: 3, name: "AssaultRifle", radius: 20, damage: 10, ammo: 10, interval: 10},
+                    Switch: function(val){
+                        console.log("Weapon switched id="+val);
+                        switch(val){
+                            case 0: 
+                                return this.Uzi;
+                                break;
+                            case 1:
+                                return this.Shotgun;
+                                break;
+                            case 2: 
+                                return this.AssaultRifle;
+                                break;
+                            case 3: 
+                                return this.Pistol;
+                                break;
+                        }
+                            
+                    }
+            };
+            
+            function init_WeaponSound() {
+                // if initializeDefaultPlugins returns false, we cannot play sound
+                if (!createjs.Sound.initializeDefaultPlugins()) {return;}
+
+                var audioPath = "files/js/assets/";
+                var manifest = [
+                    {id:"Pistol_Shot", src:"pistol_shot.mp3"},
+                    {id:"Uzi_Shot", src:"uzi_shot.mp3"},
+                    {id:"Shotgun_Shot", src:"shotgun_shot-cutmp3.net.mp3"},
+                    {id:"Empty_Shot", src:"emptyclip.mp3"}
+                ];
+
+                createjs.Sound.alternateExtensions = ["mp3"];
+                createjs.Sound.registerManifest(manifest, audioPath);
+            }
+
+            function handleWeaponShot(event) {
+                var myInstance = createjs.Sound.createInstance(event+"_Shot");
+                myInstance.play();
+            }
+          
+            // Class Enemy
+            // BUG: mouseout und mouseover triggern nicht. Ziel: Gegner muss "angeklickt und ausgewählt" werden
+            // zu oben: Eventuell EventListener auf Stage setzen. Anschließend stetig prüfen, ob Gegner sich im Bereich befindetw
+            function Enemy(stag, startX, startY){
+                this.stage = stag;
+                
+                this.bitmap = new createjs.Bitmap("files/js/assets/enemy.png");
+                this.bitmap.regX = this.bitmap.regY = 16;
+                this.bitmap.x = startX;
+                this.bitmap.y = startY;
+                
+                this.spdX = 1;
+                this.spdY = 1;
+                
+                this.health = 100;
+                this.isClicked = false;
+                this.isFocused = false;
+                
+                var that = this;
+                this.bitmap.addEventListener("mousedown", function(event){
+                    that.isClicked = true;
+                });
+                
+                this.bitmap.addEventListener("click", function(event){
+                    that.isClicked = false;
+                });
+                
+                this.bitmap.addEventListener("mouseover", function(event){
+                    that.isFocused = true;
+                });
+                
+                this.bitmap.addEventListener("mouseout", function(event){
+                    that.isFocused = false;
+                });
+                
+               
+                this.stage.addChild(this.bitmap);
+            }
+            
+            Enemy.prototype.bitmap = null;
+            Enemy.prototype.stage = null;
+            
+            Enemy.prototype.spdX = 1;
+            Enemy.prototype.spdY = 1;
+            
+            Enemy.prototype.health = 100;
+            Enemy.prototype.isClicked = false;
+            Enemy.prototype.isFocused = false;
+            
+            Enemy.prototype.Update = function(playerObject){
+                if(playerObject.bitmap.x > this.bitmap.x)
+                    this.bitmap.x += this.spdX;
+                else
+                    this.bitmap.x -= this.spdX;
+                
+                if(playerObject.bitmap.y > this.bitmap.y)
+                    this.bitmap.y += this.spdY;
+                else
+                    this.bitmap.y -= this.spdY;
+                
+                var angle = Math.atan2(playerObject.bitmap.y - this.bitmap.y, playerObject.bitmap.x - this.bitmap.x );
+                angle = angle * (180/Math.PI);
+                this.bitmap.rotation = angle;
+                
+            }
+            
+            Enemy.prototype.isDead = function(){
+                if(this.health <= 0)
+                    return true;
+                else
+                    return false;
+            }
+            
+            /*function Zombie(stag, startX, startY){
+                
+                this.stage = stag;
+                this.bitmap = new createjs.Bitmap("files/js/assets/zombie.png");
+                this.bitmap.regX = this.bitmap.regY = 16;
+                this.bitmap.x = startX;
+                this.bitmap.y = startY;
+                
+                this.stage.addChild(this.bitmap);
+                Enemy.call(this);
+            }
+            
+            Zombie.prototype = new Enemy();
+            Zombie.prototype.constructor = Zombie;
+            Zombie.prototype.health = 200;
+            */
+            // EnemySound
+            function init_EnemySound() {
+                // if initializeDefaultPlugins returns false, we cannot play sound
+                if (!createjs.Sound.initializeDefaultPlugins()) {return;}
+
+                var audioPath = "files/js/assets/";
+                var manifest = [
+                    {id:"Noise", src:"zombie_noise.mp3"},
+                    {id:"Hit", src:"zombie_hit.mp3"},
+                    {id:"Dying", src:"zombie_dying.mp3"}
+                ];
+
+                createjs.Sound.alternateExtensions = ["mp3"];
+                createjs.Sound.registerManifest(manifest, audioPath);
+            }
+
+            function handleZombieSound(event) {
+                var myInstance = createjs.Sound.createInstance(event);
+                myInstance.play();
+            }
+        </script>
+    </head>
+    <body onLoad="init();">
+        <canvas id="demoCanvas" width="640" height="480">
+            alternate content
+        </canvas>
+    </body>
+</html>
